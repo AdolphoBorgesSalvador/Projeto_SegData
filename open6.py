@@ -3,6 +3,7 @@ import requests
 import json
 import re
 from senha import API_KEY
+#teste
 
 def extrair_texto_pdf(caminho_arquivo):
     texto_completo = ""
