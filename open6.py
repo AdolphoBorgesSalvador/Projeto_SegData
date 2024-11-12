@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import fitz  
 import requests
 import json
 import re
@@ -30,10 +30,8 @@ def usar_api_gpt_para_dados(texto):
         resposta = response.json()
         conteudo = resposta['choices'][0]['message']['content'].strip()
         
-        # Exibir a resposta para debug
         print("Conteúdo da resposta da API:", conteudo)
         
-        # Processa o conteúdo retornado em formato de texto
         dados_extraidos = {
             "nome": extrair_campo("Nome", conteudo),
             "cpf": extrair_campo("CPF", conteudo),
